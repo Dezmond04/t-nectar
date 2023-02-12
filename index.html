@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Title</title>
-    <script defer="defer" src="./assets/js/app.js"></script>
     <script defer="defer" src="./assets/js/lang.js"></script>
-
+    <script defer="defer" src="./assets/js/app.js"></script>
     <link href="./assets/css/app.css" rel="stylesheet" />
   </head>
   <body>
@@ -29,7 +28,12 @@
                 href="https://t.me/+971585536477"
                 target="_blank"
                 class="header__telegram-link"
-                ><img src="assets/img/icons/telegram.svg" alt="telegram"
+                ><img src="assets/img/icons/telegram.svg" alt="telegram" /> </a
+              ><a
+                href="https://telegra.ph/Retrit-Tantra-Nektar-v-Dubae-24-26-fevralya-01-31"
+                target="_blank"
+                class="header__telegraph-link"
+                ><img src="assets/img/icons/telegraph.svg" alt="telegraph"
               /></a>
             </div>
             <div class="header__logo">
@@ -71,7 +75,12 @@
                 Преобразуйте свой разум и дух на самом совершенном тантрическом
                 ретрите в Дубае!
               </h1>
-              <button class="main-banner__button mainBtn">Участвовать</button>
+              <button
+                data-go="#reservation"
+                class="main-banner__button mainBtn"
+              >
+                Участвовать
+              </button>
             </div>
             <div class="main-banner__wrapper">
               <div class="main-banner__content">
@@ -117,6 +126,24 @@
                         />
                       </div>
                     </div>
+                    <div class="main-banner-slider__slide swiper-slide">
+                      <div class="main-banner-slider__image">
+                        <img
+                          src="assets/img/main-banner-slider/main-banner-slider-image-2.jpg"
+                          alt="Slider Image"
+                          class="main-banner-slider__img"
+                        />
+                      </div>
+                    </div>
+                    <div class="main-banner-slider__slide swiper-slide">
+                      <div class="main-banner-slider__image">
+                        <img
+                          src="assets/img/main-banner-slider/main-banner-slider-image-3.jpg"
+                          alt="Slider Image"
+                          class="main-banner-slider__img"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="main-banner-slider__control">
@@ -140,14 +167,17 @@
               </div>
             </div>
             <div class="main-banner__links">
-              <a href="#" class="main-banner__link"
+              <a
+                href="https://www.facebook.com/events/2430554847103573/?active_tab=about"
+                class="main-banner__link"
+                target="_blank"
                 ><div class="main-banner__facebook">
                   <img src="assets/img/icons/facebook.svg" alt="Facebook" />
                 </div>
                 <span>Facebook</span></a
               >
             </div>
-            <div class="main-banner__reservation reservation">
+            <div id="reservation" class="main-banner__reservation reservation">
               <h2 class="reservation__title">Зарезервируйте место сейчас!</h2>
               <div class="reservation__info">
                 Не упустите эту возможность преобразить свой ум и ощутить более
@@ -155,7 +185,7 @@
               </div>
               <div class="reservation__card reservation-card">
                 <div class="reservation-card__name">
-                  Люксовый оффлайновый тантра-ретрит в Дубае на Пальме
+                  Люксовый оффлайновый тантра-ретрит в Дубае на Пальме (18+)
                 </div>
                 <div class="reservation-card__date">24-26 февраля 2023</div>
                 <div class="reservation-card__info">
@@ -204,10 +234,15 @@
             </div>
           </div>
           <div class="main-banner__map map">
-            <a href="#" class="map__title">Ссылка на локацию</a>
+            <a
+              href="https://yandex.ru/maps/org/andaz_dubai_the_palm_a_concept_by_hyatt/107164697011/?from=tabbar&ll=55.141204%2C25.116822&mode=search&sctx=ZAAAAAgCEAAaKAoSCXHLR1LSwUJAER0hA3l290tAEhIJf7%2BYLVkVtT8RVyHlJ9U%2BuT8iBgABAgMEBSgKOABA1gFIAWIhYWRkX3NuaXBwZXQ9dG9wb255bV9kaXNjb3ZlcnkvMS54YkJyZWFycj1zY2hlbWVfTG9jYWwvR2VvL0xpc3REaXNjb3ZlcnkvRW5hYmxlRGlzY292ZXJ5VGV4dFJlcXVlc3RzPTFiNXJlYXJyPXNjaGVtZV9Mb2NhbC9HZW8vTGlzdERpc2NvdmVyeS9FbmFibGVSZXF1ZXN0cz0xYjpyZWFycj1zY2hlbWVfTG9jYWwvR2VvL0xpc3REaXNjb3ZlcnkvRW5hYmxlRW1wdHlSZXF1ZXN0cz0xYjVyZWFycj1zY2hlbWVfTG9jYWwvR2VvL0xpc3REaXNjb3ZlcnkvRW5hYmxlVmVydGljYWw9MWIwcmVhcnI9c2NoZW1lX0xvY2FsL0dlby9Bc2tEaXNjb3ZlcnlGb3JUb3Bvbnltcz0xYjpyZWFycj1zY2hlbWVfTG9jYWwvR2VvL0xpc3REaXNjb3ZlcnkvRW5hYmxlQ29tbW9uUGljTWVudT0xagJydZ0BzcxMPaABAKgBAL0BeRC%2BHcIBGLODjpyPA9SG0aHzAZTdvMHmBvuAoYCKBOoBAPIBAPgBAIICHUFuZGF6IHRoZSBQYWxtIER1YmFpIGJ5IEh5YXR0igIAkgIFMTE0OTmaAgxkZXNrdG9wLW1hcHM%3D&sll=55.141204%2C25.116822&source=serp_navig&sspn=0.078278%2C0.043605&text=Andaz%20the%20Palm%20Dubai%20by%20Hyatt&z=14"
+              class="map__title"
+              target="_blank"
+              >Ссылка на локацию</a
+            >
             <div class="map__iframe">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28900.801487485212!2d55.10023891925812!3d25.115391967454464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f14d51acdee85%3A0xc64cb17094ee5d84!2sPalm%20Jumeirah%20West!5e0!3m2!1sru!2sru!4v1676151573324!5m2!1sru!2sru"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40626.095986659646!2d55.12449599808791!3d25.114302359045038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b058a43c3bf%3A0xaf36750efbddf27a!2sAndaz%20Dubai%20The%20Palm%20-%20a%20Concept%20by%20Hyatt!5e0!3m2!1sru!2sru!4v1676236466549!5m2!1sru!2sru"
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
