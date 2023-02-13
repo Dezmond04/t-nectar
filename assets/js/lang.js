@@ -1,7 +1,7 @@
 const langArr = {
   unit: {
-    ru: "Тайтл",
-    en: "title",
+    ru: "Преобразуйте свой разум и дух на самом совершенном тантрическом ретрите в Дубае!",
+    en: "Transform your mind and spirit with the ultimate Tantra retreat in Dubai!",
   },
   "main-banner__title": {
     ru: "Преобразуйте свой разум и дух на самом совершенном тантрическом ретрите в Дубае!",
@@ -12,8 +12,8 @@ const langArr = {
     en: "February 24 - 26, 2023. Andaz the Palm Dubai by Hyatt (5*)",
   },
   "main-banner__button": {
-    ru: "Участвовать",
-    en: "Join",
+    ru: "Участвовать!",
+    en: "Join!",
   },
   "main-banner__name": {
     ru: "Преподаватель: мастер <a href='https://tantranectar.com' target='blank'>Сатьярти Пратик</a>",
