@@ -53,7 +53,7 @@ const langArr = {
   },
   "reservation-card__count--first": {
     ru: "1 человек",
-    en: "1 people",
+    en: "1 person",
   },
   "reservation-card__price--first": {
     ru: "3000 AED / чел.",
@@ -65,7 +65,7 @@ const langArr = {
   },
   "reservation-card__count--second": {
     ru: "Для пары",
-    en: "For couple",
+    en: "For a couple",
   },
   "reservation-card__price--second": {
     ru: "2500 AED / чел.",
@@ -88,7 +88,7 @@ const langArr = {
     en: "Name",
   },
   "popup1-phone": {
-    ru: "Тулуфон",
+    ru: "Телефон",
     en: "Phone",
   },
   "popup1-man": {
