@@ -478,14 +478,18 @@
     <script>
         const thanksPopup = document.querySelector('#thanksModal');
         const thanksClose = thanksPopup.querySelector('.popup__close');
-        if (thanksPopup) {
+        const langFix = sessionStorage.getItem('firstEnter');
+
+        if (thanksPopup && !langFix) {
             thanksPopup.classList.add('popup__show');
             thanksClose.addEventListener('click', function(){
                 if(thanksPopup.classList.contains('popup__show')) {
                     thanksPopup.classList.remove('popup__show');
                 }
+                sessionStorage.setItem('firstEnter', 1);
             });
         }
+
        
 
 
