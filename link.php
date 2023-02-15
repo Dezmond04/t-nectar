@@ -13,7 +13,7 @@ define('MAIL', [
     'info@maxsharun.ru'
 ]);
 define('SENDER', 'no-reply@t-nectar.ae');
-define('RETURN_URL', 'https://t-nectar.ae?success=1');
+define('RETURN_URL', 'https://t-nectar.ae/success.html');
 
 $count = $_POST['count'];
 $phone = $_POST['phone'];
