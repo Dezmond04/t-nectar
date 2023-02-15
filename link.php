@@ -113,8 +113,13 @@ curl_close($curl);
 if ($payMethod != 'RUB') {
     $url = empty($response['payment_url']) ? '' : $response['payment_url'];
     if (empty($url)) {
-        if ($count == 1) $url = 'https://business.mamopay.com/pay/energissimo-d6cd80';
-        else $url = 'https://business.mamopay.com/pay/energissimo-51b2f3';
+        if ($count == 1) {
+            if ($_POST['sex'] == 'male') {
+                $url = 'https://business.mamopay.com/pay/energissimo-d6cd80';
+            } else {
+                $url = 'https://business.mamopay.com/pay/energissimo-d6cd80';
+            }
+        } else $url = 'https://business.mamopay.com/pay/energissimo-51b2f3';
     }
 } else {
     $url = $response['confirmation']['confirmation_url'];
