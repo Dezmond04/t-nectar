@@ -17,6 +17,7 @@ define('RETURN_URL', 'https://t-nectar.ae?success=1');
 
 $count = $_POST['count'];
 $phone = $_POST['phone'];
+$email = $_POST['email'];
 if ($count < 1) $count = 1;
 else if ($count > 2) $count = 2;
 
@@ -25,6 +26,7 @@ $payMethod = $_POST['paymethod'];
 $message = 'Количество: ' . $count . '<br>';
 $message .= 'Телефон: ' . $phone . '<br>';
 $message .= 'Способ оплаты: ' . ($payMethod == 'later' ? 'Позже' : $payMethod) . '<br>';
+$message .= 'Email: ' . $email . '<br>';
 
 if ($count == 1) {
     $sex = $_POST['sex'] == 'male' ? 'мужской' : 'женский';
@@ -117,6 +119,7 @@ if ($payMethod === 'RUB') /*{
 
     $amount *= 20;
     $description = $customData['phone'] . '. ';
+    if (!empty($email)) $description .= $email . '. ';
     if (!empty($customData['name'])) $description .= $customData['name'];
     else $description .= $customData['male_name'] . ', ' . $customData['female_name'];
 
@@ -147,17 +150,18 @@ $response = json_decode($response, true);
 curl_close($curl);
 
 if ($payMethod != 'RUB') {
+    $day = intval('d');
 //    $url = empty($response['payment_url']) ? '' : $response['payment_url'];
     $url = '';
     if (empty($url)) {
         if ($count == 1) {
             if ($_POST['sex'] == 'male') {
-                $url = 'https://business.mamopay.com/pay/energissimo-06840e';
+                $url = $day < 20 ? 'https://business.mamopay.com/pay/energissimo-722510' : 'https://business.mamopay.com/pay/energissimo-06840e';
             } else {
-                $url = 'https://business.mamopay.com/pay/energissimo-907f80';
+                $url = $day < 20 ? 'https://business.mamopay.com/pay/energissimo-5f6b1f' : 'https://business.mamopay.com/pay/energissimo-907f80';
             }
         } else {
-            $url = 'https://business.mamopay.com/pay/energissimo-a19d18';
+            $url = $day < 20 ? 'https://business.mamopay.com/pay/energissimo-505e26' : 'https://business.mamopay.com/pay/energissimo-a19d18';
         }
     }
 } else {
