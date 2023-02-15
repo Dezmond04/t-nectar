@@ -1,15 +1,15 @@
 const langArr = {
   unit: {
-    ru: "Преобразуйте свой разум и дух на самом совершенном тантрическом ретрите в Дубае!",
+    ru: "Преобразуйте свой разум и дух на совершенном тантрическом ретрите в Дубае!",
     en: "Transform your mind and spirit with the ultimate Tantra retreat in Dubai!",
   },
   "main-banner__title": {
-    ru: "Преобразуйте свой разум и дух на самом совершенном тантрическом ретрите в Дубае!",
+    ru: "Преобразуйте свой разум и дух на совершенном тантрическом ретрите в Дубае!",
     en: "Transform your mind and spirit with the ultimate Tantra retreat in Dubai!",
   },
   "main-banner__info": {
-    ru: "24 - 26 февраля 2023. Отель  Andaz the Palm Dubai by Hyatt (5*).",
-    en: "February 24 - 26, 2023. Andaz the Palm Dubai by Hyatt (5*)",
+    ru: "24 - 26 февраля 2023. Отель  Andaz the Palm Dubai by Hyatt.",
+    en: "February 24 - 26, 2023. Andaz the Palm Dubai by Hyatt",
   },
   "main-banner__button": {
     ru: "Участвовать!",
@@ -20,24 +20,24 @@ const langArr = {
     en: "Teacher: master <a href='https://tantranectar.com' target='blank'>Satyarthi Pratik</a>  ",
   },
   leftInfo: {
-    ru: "Присоединяйтесь к нам в роскошном отеле <a href='https://www.hyatt.com/ru-RU/hotel/dubai/andaz-dubai-the-palm/dxbct' target='_blank'>Andaz the Palm Dubai by Hyatt</a> для участия в преображающем ретрите по тантре под руководством мастера Сатьярти Пратика, впервые в Дубае. Окунитесь в омолаживающее путешествие самосознания, духовного роста и внутреннего покоя в выходные 24-26 февраля.",
-    en: "Join us at the luxurious <a href='https://www.hyatt.com/ru-RU/hotel/dubai/andaz-dubai-the-palm/dxbct' target='_blank'>Andaz the Palm Dubai by Hyatt</a> for a life-changing Tantra retreat led by Grand Master Satyarthi Prateek, for the first time in Dubai. Plunge into a rejuvenated journey of self-awareness, spiritual growth and inner peace over the weekend of 24-26 February.",
+    ru: "Присоединяйтесь к нам в роскошном отеле <a href='https://www.hyatt.com/ru-RU/hotel/dubai/andaz-dubai-the-palm/dxbct' target='_blank'>Andaz the Palm Dubai by Hyatt</a> для участия в первом ретрите по тантре в Дубае под руководством известного мастера Сатьярти Пратика. Окунитесь в омолаживающее путешествие самосознания, духовного роста и внутреннего покоя в выходные с 24 по 26 февраля.",
+    en: "Join us at the luxurious <a href='https://www.hyatt.com/ru-RU/hotel/dubai/andaz-dubai-the-palm/dxbct' target='_blank'>Andaz the Palm Dubai by Hyatt</a> for a life-changing Tantra retreat led by Grand Master Satyarthi Prateek, for the first time in Dubai. Plunge into a rejuvenated journey of self-awareness, spiritual growth and inner peace during the weekend of 24-26 February.",
   },
   "leftInfo-2": {
     ru: "Событие будет вестись на английском языке с  живым переводом на русский.",
     en: "The event will be conducted in English with live translation into Russian",
   },
   "leftInfo-3": {
-    ru: "Отдохните и зарядитесь энергией благодаря практикам йоги и медитации, семинарам и личным наставлениям Мастера Сатьярти. Это эксклюзивное мероприятие, призванное помочь вам обратиться к своей внутренней мудрости и раскрыть весь свой потенциал, предназначено как для одиночек, так и для пар.",
-    en: "Unwind and recharge with yoga and meditation practices, workshops and personal guidance from Master Satyarthi. Designed to help you tap into your inner wisdom and unlock your full potential, this exclusive event is for individuals and couples alike.",
+    ru: "Отдохните и зарядитесь энергией благодаря практикам йоги и медитации, семинарам и личным наставлениям Мастера Сатьярти. Ретрит поможет вам обратиться к своей внутренней мудрости и раскрыть свой внутренний потенциал. Участие возможно индивидуально, а так же в парах.",
+    en: "Unwind and recharge with yoga and meditation practices, workshops and personal guidance from Master Satyarthi. Designed to help you tap into your inner wisdom and unlock your full potential, this exclusive event is both for individuals and couples.",
   },
   reservation__title: {
-    ru: "Зарезервируйте место сейчас!",
-    en: "Reserve a seat online",
+    ru: "Воспользуйтесь нашей скидкой для ранних пташек в размере 10%, если вы сделаете заказ до 20 февраля.",
+    en: "Make the most of our early-bird discount of 10% if you book before February, 20.",
   },
   reservation__info: {
-    ru: "Не упустите эту возможность преобразить свой ум и ощутить более глубокую связь с собой и другими.",
-    en: "Don't miss this opportunity to transform your mind and experience a deeper connection with yourself and others.",
+    ru: "Зарезервируйте место сейчас! Не упустите эту возможность преобразить свой ум и ощутить более глубокую связь с собой.",
+    en: "Reserve your place now! Don't miss this opportunity to transform your mind and experience a deeper connection with yourself and others.",
   },
   "reservation-card__name": {
     ru: "Люксовый оффлайновый тантра-ретрит в Дубае на Пальме",
@@ -102,6 +102,18 @@ const langArr = {
   "popup1-price": {
     ru: "Общая стоимость",
     en: "Total price",
+  },
+  "popup1-pay-aed": {
+    ru: "AED",
+    en: "AED",
+  },
+  "popup1-pay-rub": {
+    ru: "RUB",
+    en: "RUB",
+  },
+  "popup1-pay-after": {
+    ru: "Заплачу позже",
+    en: "I'll pay you later",
   },
   "popup1-send": {
     ru: "Отправить",
