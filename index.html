@@ -323,22 +323,25 @@
         <div class="popup__content">
           <button class="popup__close"></button>
           <div class="popup__body">
-            <form class="popup__form">
+            <form class="popup__form request_form">
+              <input type="hidden" name="count" value="1">
               <div class="popup__inputs">
-                <label class="popup__man popup1-name">Имя</label> <input />
+                <label class="popup__man popup1-name">Имя</label>
+                <input type="text" name="name" required/>
+
                 <label class="popup__phone popup1-phone">Телефон</label>
-                <input />
+                <input type="tel" name="phone" required/>
               </div>
               <div class="popup__labels">
                 <label class="popup__label"
-                  ><input name="sex" type="radio" class="popup__radio" />
+                  ><input name="sex" type="radio" class="popup__radio" value="male" checked/>
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-man"
                     >Мужчина</span
                   ></label
                 >
                 <label class="popup__label"
-                  ><input name="sex" type="radio" class="popup__radio" />
+                  ><input name="sex" type="radio" class="popup__radio" value="female" />
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-women"
                     >Женщина</span
@@ -347,21 +350,21 @@
               </div>
               <div class="popup__labels">
                 <label class="popup__label"
-                  ><input name="paymethod" type="radio" class="popup__radio" />
+                  ><input name="paymethod" type="radio" class="popup__radio" value="AED" checked/>
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-pay-aed"
                     >AED</span
                   ></label
                 >
                 <label class="popup__label"
-                  ><input name="paymethod" type="radio" class="popup__radio" />
+                  ><input name="paymethod" type="radio" class="popup__radio" value="RUB" />
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-pay-rub"
                     >RUB</span
                   ></label
                 >
                 <label class="popup__label"
-                  ><input name="paymethod" type="radio" class="popup__radio" />
+                  ><input name="paymethod" type="radio" class="popup__radio" value="later" />
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-pay-after"
                     >Заплачу позже</span
@@ -374,7 +377,7 @@
                 >
                 <input value="3000" disabled="disabled" placeholder="3000" />
               </div>
-              <button class="popup__send popup1-send">Отправить</button>
+              <button class="popup__send popup1-send send">Отправить</button>
             </form>
           </div>
         </div>
@@ -385,32 +388,33 @@
         <div class="popup__content">
           <button class="popup__close"></button>
           <div class="popup__body">
-            <form class="popup__form">
+            <form class="popup__form request_form">
+              <input type="hidden" name="count" value="2">
               <div class="popup__inputs">
                 <label class="popup__man popup2-name-man">Имя мужчины</label>
-                <input />
+                <input type="text" name="male_name" required/>
                 <label class="popup__man popup2-name-women">Имя женщины</label>
-                <input />
+                <input type="text" name="female_name" required/>
                 <label class="popup__phone popup2-phone">Телефон</label>
-                <input />
+                <input type="tel" name="phone" required/>
               </div>
               <div class="popup__labels">
                 <label class="popup__label"
-                  ><input name="paymethod" type="radio" class="popup__radio" />
+                  ><input name="paymethod" type="radio" class="popup__radio" value="AED" checked/>
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-pay-aed"
                     >AED</span
                   ></label
                 >
                 <label class="popup__label"
-                  ><input name="paymethod" type="radio" class="popup__radio" />
+                  ><input name="paymethod" type="radio" class="popup__radio" value="RUB"/>
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-pay-rub"
                     >RUB</span
                   ></label
                 >
                 <label class="popup__label"
-                  ><input name="paymethod" type="radio" class="popup__radio" />
+                  ><input name="paymethod" type="radio" class="popup__radio" value="later"/>
                   <span class="popup__check"></span>
                   <span class="popup__check-text popup1-pay-after"
                     >Заплачу позже</span
@@ -423,12 +427,13 @@
                 >
                 <input value="5000" disabled="disabled" placeholder="5000" />
               </div>
-              <button class="popup__send popup2-send">Отправить</button>
+              <button class="popup__send popup2-send send">Отправить</button>
             </form>
           </div>
         </div>
       </div>
     </div>
     <script src="./assets/js/lang.js"></script>
+    <script src="./assets/js/request.js" type="module"></script>
   </body>
 </html>
