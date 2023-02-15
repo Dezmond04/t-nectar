@@ -5,7 +5,10 @@ else if ($count > 2) $count = 2;
 
 $payMethod = $_POST['paymethod'];
 if ($payMethod == 'later') {
-    define('MAIL', []);
+    define('MAIL', [
+        'aenergissimo@gmail.com',
+        'aleksandr.radchenko.2000@mail.ru'
+    ]);
     define('SENDER', 'no-reply@t-nectar.ae');
     $message = 'Количество: ' . $count . '<br>';
     if ($count == 1) {
