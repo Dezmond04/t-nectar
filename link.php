@@ -16,14 +16,20 @@ define('SENDER', 'no-reply@t-nectar.ae');
 define('RETURN_URL', 'https://t-nectar.ae?success=1');
 
 $count = $_POST['count'];
+$phone = $_POST['phone'];
 if ($count < 1) $count = 1;
 else if ($count > 2) $count = 2;
 
 $payMethod = $_POST['paymethod'];
 
 $message = 'Количество: ' . $count . '<br>';
+$message .= 'Телефон: ' . $phone . '<br>';
+$message .= 'Способ оплаты: ' . ($payMethod == 'later' ? 'Позже' : $payMethod) . '<br>';
+
 if ($count == 1) {
-    $message .= $_POST['name'] . '<br>';
+    $sex = $_POST['sex'] == 'male' ? 'мужской' : 'женский';
+    $message .= 'Имя: ' . $_POST['name'] . '<br>';
+    $message .= 'Пол: ' . $sex . '<br>';
 } else {
     $message .= 'Имя мужчины: ' . $_POST['male_name'] . '<br>';
     $message .= 'Имя женщины' . $_POST['female_name'] . '<br>';
@@ -35,7 +41,7 @@ $headers .= "Reply-To: " . SENDER . " \r\n";
 
 foreach (MAIL as $address) {
     $mail = new PHPMailer(true);
-    $mail->SMTPSecure = "ssl";
+    $mail->SMTPSecure = "tls";
 
 
     $mail->setFrom('no-reply@t-nectar.ae', 't-nectar.ae');
@@ -72,7 +78,7 @@ $curl = curl_init();
 
 $amount = $count == 1 ? 3000 : 5000;
 
-$customData = ['phone' => $_POST['phone']];
+$customData = ['phone' => $phone];
 if ($count == 1) {
     $customData['name'] = $_POST['name'];
     $customData['sex'] = $_POST['sex'];
