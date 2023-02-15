@@ -50,7 +50,7 @@ foreach (MAIL as $address) {
     $mail->CharSet = 'UTF-8';
 
     $mail->Host = "smtp.jino.ru";    // SMTP server example
-    $mail->SMTPDebug = 2;                     // enables SMTP debug information (for testing)
+//    $mail->SMTPDebug = 2;                     // enables SMTP debug information (for testing)
     $mail->SMTPAuth = true;                  // enable SMTP authentication
     $mail->Port = 587;                    // set the SMTP port for the GMAIL server
     $mail->Username = "no-reply@t-nectar.ae";            // SMTP account username example
@@ -86,7 +86,7 @@ if ($count == 1) {
     $customData['male_name'] = $_POST['male_name'];
     $customData['female_name'] = $_POST['female_name'];
 }
-if ($payMethod !== 'RUB') {
+if ($payMethod === 'RUB') /*{
     $url = "https://business.mamopay.com/manage_api/v1/links";
 //    $url = 'https://asia-southeast2-mamo-pay-business-staging.cloudfunctions.net/api-sandbox-links';
     $apiKey = 'sk-56ef4ae3-62e4-4beb-8873-8363253d6eb5';
@@ -108,7 +108,7 @@ if ($payMethod !== 'RUB') {
         'active' => true,
         'capacity' => 1
     ];
-} else {
+} else*/ {
     $url = 'https://api.yookassa.ru/v3/payments';
     $apiKey = 'test_T3cB6ihDXf16yJVyUCUrXnsW7-lFbJ0fCne1_T4qMeE';
     $headers[] = 'Idempotence-Key: ' . base64_encode(mt_rand(100000, 999999999));
@@ -147,7 +147,8 @@ $response = json_decode($response, true);
 curl_close($curl);
 
 if ($payMethod != 'RUB') {
-    $url = empty($response['payment_url']) ? '' : $response['payment_url'];
+//    $url = empty($response['payment_url']) ? '' : $response['payment_url'];
+    $url = '';
     if (empty($url)) {
         if ($count == 1) {
             if ($_POST['sex'] == 'male') {
