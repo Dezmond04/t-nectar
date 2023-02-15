@@ -1,4 +1,12 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
+
 define('MAIL', [
     'aenergissimo@gmail.com',
     'aleksandr.radchenko.2000@mail.ru',
@@ -25,8 +33,30 @@ $headers = "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: " . SENDER . " \r\n";
 $headers .= "Reply-To: " . SENDER . " \r\n";
 
-foreach (MAIL as $mail) {
-    mail($mail, 'Заявка', $message, $headers);
+foreach (MAIL as $address) {
+    $mail = new PHPMailer(true);
+    $mail->SMTPSecure = "ssl";
+
+
+    $mail->setFrom('no-reply@t-nectar.ae', 't-nectar.ae');
+    $mail->addAddress($address);
+    $mail->IsSMTP();
+    $mail->CharSet = 'UTF-8';
+
+    $mail->Host = "smtp.jino.ru";    // SMTP server example
+    $mail->SMTPDebug = 2;                     // enables SMTP debug information (for testing)
+    $mail->SMTPAuth = true;                  // enable SMTP authentication
+    $mail->Port = 587;                    // set the SMTP port for the GMAIL server
+    $mail->Username = "no-reply@t-nectar.ae";            // SMTP account username example
+    $mail->Password = "J_[yGCzX6Pnp";            // SMTP account password example
+
+// Content
+    $mail->isHTML(true);                       // Set email format to HTML
+    $mail->Subject = 'Заявка';
+    $mail->Body = $message;
+    $mail->AltBody = $message;
+
+    $mail->send();
 }
 
 if ($payMethod == 'later') {
@@ -115,11 +145,13 @@ if ($payMethod != 'RUB') {
     if (empty($url)) {
         if ($count == 1) {
             if ($_POST['sex'] == 'male') {
-                $url = 'https://business.mamopay.com/pay/energissimo-d6cd80';
+                $url = 'https://business.mamopay.com/pay/energissimo-06840e';
             } else {
-                $url = 'https://business.mamopay.com/pay/energissimo-d6cd80';
+                $url = 'https://business.mamopay.com/pay/energissimo-907f80';
             }
-        } else $url = 'https://business.mamopay.com/pay/energissimo-51b2f3';
+        } else {
+            $url = 'https://business.mamopay.com/pay/energissimo-a19d18';
+        }
     }
 } else {
     $url = $response['confirmation']['confirmation_url'];
