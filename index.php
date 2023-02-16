@@ -1,3 +1,9 @@
+<?php
+if(!empty($_GET['success'])) {
+  header('Location: /success.html');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
