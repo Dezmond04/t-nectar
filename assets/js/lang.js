@@ -8,8 +8,8 @@ const langArr = {
     en: "Transform your mind and spirit with the ultimate Tantra retreat in Dubai!",
   },
   "main-banner__info": {
-    ru: "24 - 26 февраля 2023. Отель  'Andaz the Palm Dubai by Hyatt'.",
-    en: "February 24 - 26, 2023. 'Andaz the Palm Dubai by Hyatt'",
+    ru: "24 - 26 февраля 2023. Отель  Andaz the Palm Dubai by Hyatt.",
+    en: "February 24 - 26, 2023. Andaz the Palm Dubai by Hyatt",
   },
   "main-banner__button": {
     ru: "Участвовать",
@@ -56,8 +56,12 @@ const langArr = {
     en: "1 person",
   },
   "reservation-card__price--first": {
-    ru: "3000 AED / чел.",
-    en: "3000 AED / person",
+    ru: "3000 AED",
+    en: "3000 AED",
+  },
+  "reservation-card__price--first--discount": {
+    ru: "2700 AED",
+    en: "2700 AED",
   },
   "reservation-card__buy--first": {
     ru: "Купить",
@@ -68,8 +72,12 @@ const langArr = {
     en: "For a couple",
   },
   "reservation-card__price--second": {
-    ru: "2500 AED / чел.",
-    en: "2500 AED / person ",
+    ru: "5000 AED",
+    en: "5000 AED",
+  },
+  "reservation-card__price--second--discount": {
+    ru: "4500 AED",
+    en: "4500 AED ",
   },
   "reservation-card__buy--second": {
     ru: "Купить",

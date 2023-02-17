@@ -261,10 +261,15 @@ if(!empty($_GET['success'])) {
                     >
                       1 человек
                     </div>
-                    <div
+                    <div style="text-decoration:line-through;"
                       class="reservation-card__price reservation-card__price--first"
                     >
                       3000 AED / чел.
+                    </div>
+                    <div style="color:#ff0000;"
+                      class="reservation-card__price reservation-card__price--first--discount"
+                    >
+                      2700 AED / чел.
                     </div>
                     <button
                       data-popup="#onePerson"
@@ -279,8 +284,13 @@ if(!empty($_GET['success'])) {
                     >
                       Для пары
                     </div>
-                    <div
+                    <div style="text-decoration:line-through;"
                       class="reservation-card__price reservation-card__price--second"
+                    >
+                      2500 AED / чел.
+                    </div>
+                    <div style="color:#ff0000;"
+                      class="reservation-card__price reservation-card__price--second--discount"
                     >
                       2500 AED / чел.
                     </div>
@@ -384,7 +394,7 @@ if(!empty($_GET['success'])) {
                 <label class="popup__price-label popup1-price"
                   >Общая стоимость</label
                 >
-                <input value="3000" disabled="disabled" placeholder="3000" />
+                <input value="2700" disabled="disabled" placeholder="2700" />
               </div>
               <button class="popup__send popup1-send send">Отправить</button>
             </form>
@@ -436,7 +446,7 @@ if(!empty($_GET['success'])) {
                 <label class="popup__price-label popup2-price"
                   >Общая стоимость</label
                 >
-                <input value="5000" disabled="disabled" placeholder="5000" />
+                <input value="4500" disabled="disabled" placeholder="4500" />
               </div>
               <button class="popup__send popup2-send send">Отправить</button>
             </form>
